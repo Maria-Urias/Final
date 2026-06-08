@@ -1,109 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | Final Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice and Cariño Microbakery</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #b38b6d;
-      color: #fff8f0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(to bottom, #f6cfd8 0%, #f4c8d2 45%, #f8ddd7 100%);
+      color: #ffffff;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.15);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #fff8f0;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px 20px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 600px;
+    .welcome {
+      margin: 0;
       font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
     }
 
-    .button-link {
+    .title {
+      margin: 10px 0 0;
+      font-size: clamp(2.6rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .section {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 10px 24px 50px;
+    }
+
+    .intro-row,
+    .lower-row {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .intro-row {
+      grid-template-columns: 1.1fr 1fr 1.2fr;
+    }
+
+    .lower-row {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 35px;
+      align-items: start;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .image-link {
       text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
-    .button-link button {
-      background-color: #fff8f0;
-      color: #7a5c45;
-      border: none;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
+    .card img {
+      width: 100%;
+      max-width: 340px;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .button-link button:hover {
-      background-color: #f0e0d2;
-      transform: translateY(-2px);
+    .card img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+    }
+
+    .cupcake img {
+      height: 420px;
+      object-fit: contain;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .tilt-left img {
+      transform: rotate(-8deg);
+    }
+
+    .tilt-right img {
+      transform: rotate(8deg);
+    }
+
+    .tilt-left img:hover {
+      transform: rotate(-8deg) scale(1.03);
+    }
+
+    .tilt-right img:hover {
+      transform: rotate(8deg) scale(1.03);
+    }
+
+    .script-text {
+      margin: 24px 0 0;
+      font-family: "Brush Script MT", cursive;
+      font-size: 2.1rem;
+      color: #2f1a1a;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.12);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff8f5;
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      .intro-row,
+      .lower-row {
+        grid-template-columns: 1fr;
+      }
+
+      .script-text {
+        text-align: center;
+      }
+
+      .card img,
+      .cupcake img {
+        max-width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Final Project</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="page2.html">About</a>
-    </nav>
+    <p class="welcome">Welcome To</p>
+    <h1 class="title">Spice and Cariño<br>Microbakery</h1>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>
-      This is a simple, modern website with a warm dark tan design. Click the button below
-      to visit the next page and explore more.
-    </p>
-    <a class="button-link" href="page2.html">
-      <button>Learn More</button>
-    </a>
-  </section>
+  <main class="section">
+    <section class="intro-row">
+      <a class="image-link card cupcake" href="cupcake.html">
+        <img src="images/cupcake.png" alt="Pink frosted cupcake">
+      </a>
+
+      <a class="image-link card" href="stuffed-bollio.html">
+        <img src="images/stuffed-bollio.jpg" alt="Fresh bread rolls on a tray">
+      </a>
+
+      <a class="image-link card" href="coffee-cake.html">
+        <img src="images/coffee-cake.jpg" alt="Coffee cake sliced in half">
+      </a>
+    </section>
+
+    <p class="script-text">Click on an image to open its page</p>
+
+    <section class="lower-row">
+      <a class="image-link card" href="artisan-bread.html">
+        <img src="images/artisan-bread.jpg" alt="Round artisan bread on a cooling rack">
+      </a>
+
+      <a class="image-link card tilt-left" href="loaf-bread.html">
+        <img src="images/loaf-bread.jpg" alt="Golden loaf bread on a baking tray">
+      </a>
+
+      <a class="image-link card tilt-right" href="focaccia.html">
+        <img src="images/focaccia.jpg" alt="Sliced focaccia bread">
+      </a>
+    </section>
+
+    <p class="script-text">Each photo links to a different page</p>
+  </main>
 
   <footer>
-    <p>&copy; 2026 Final Project. All rights reserved.</p>
+    <p>&copy; 2026 Spice and Cariño Microbakery</p>
   </footer>
 </body>
 </html>
