@@ -50,7 +50,8 @@
     }
 
     .intro-row {
-      grid-template-columns: 1.1fr 1fr 1.2fr;
+      grid-template-columns: 1fr 1.2fr;
+      justify-content: center;
     }
 
     .lower-row {
@@ -85,13 +86,6 @@
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
     }
 
-    .cupcake img {
-      height: 420px;
-      object-fit: contain;
-      box-shadow: none;
-      background: transparent;
-    }
-
     .tilt-left img {
       transform: rotate(-8deg);
     }
@@ -113,6 +107,7 @@
       font-family: "Brush Script MT", cursive;
       font-size: 2.1rem;
       color: #2f1a1a;
+      text-align: center;
     }
 
     footer {
@@ -129,12 +124,7 @@
         grid-template-columns: 1fr;
       }
 
-      .script-text {
-        text-align: center;
-      }
-
-      .card img,
-      .cupcake img {
+      .card img {
         max-width: 100%;
         height: auto;
       }
@@ -149,10 +139,6 @@
 
   <main class="section">
     <section class="intro-row">
-      <a class="image-link card cupcake" href="cupcake.html">
-        <img src="390666b6-2aec-4df3-be26-f922c262029c.jpeg" alt="Pink frosted cupcake">
-      </a>
-
       <a class="image-link card" href="stuffed-bollio.html">
         <img src="6a68aa97-a571-421a-8339-04287819ab40.jpeg" alt="Fresh bread rolls on a tray">
       </a>
