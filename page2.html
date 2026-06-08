@@ -3,10 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page 2</title>
+  <title>About | Final Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b38b6d;
+      color: #fff8f0;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.15);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff8f0;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .content {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      max-width: 700px;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .button-link {
+      text-decoration: none;
+    }
+
+    .button-link button {
+      background-color: #fff8f0;
+      color: #7a5c45;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .button-link button:hover {
+      background-color: #f0e0d2;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+  </style>
 </head>
 <body>
-  <h1>This is Page 2</h1>
-  <a href="index.html">Go back</a>
+  <header>
+    <div class="logo">Final Project</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="page2.html">About</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h1>About This Website</h1>
+    <p>
+      This page is part of a simple two-page website designed with a polished dark tan theme.
+      It shows how navigation, layout, and styling can work together to create a more professional-looking site.
+    </p>
+    <a class="button-link" href="index.html">
+      <button>Back to Home</button>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Final Project. All rights reserved.</p>
+  </footer>
 </body>
 </html>
